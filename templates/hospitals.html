@@ -1,0 +1,213 @@
+<html>
+
+<head>
+    <link rel="icon" href="https://i.pinimg.com/236x/f4/c8/51/f4c851183b5ed083a6b08340a9c0a527--medical-tattoos-nurse-tattoos.jpg" type="image/jpg">
+    <style>
+        body {
+            background-image: url(https://previews.123rf.com/images/samarttiw/samarttiw1603/samarttiw160300001/55867911-molecular-structure-medical-background-illustrations.jpg);
+            background-attachment: fixed;
+        }
+        
+        h1 {
+            font-size: 50;
+            font-style: oblique;
+            text-align: center;
+            font-family: monospace;
+        }
+
+        .showSlide {
+            display: block;
+            height:500;
+            width: 420;
+            margin: auto;
+        }
+
+        .showSlide img {
+            width:600;
+            height:400px;
+        }
+
+        .slidercontainer {
+            width:100%;
+            position: relative;
+            margin: auto;
+            height: 500;
+        }
+
+        .left,
+        .right {
+            cursor: pointer;
+            position:absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            background-color:white;
+            margin-top:-70px;
+            margin-left:339;
+            color:red;
+            font-weight:bold;
+            font-size: 18px;
+            transition: 0.6s ease-in;
+            border-radius: 15PX 15px 15px 15PX;
+        }
+
+        .right {
+            right:0;
+            border-radius: 15px 15px 15px 15px;
+            margin-right: 160;
+        }
+
+        .left:hover,
+        .right:hover {
+            background-color:pink;
+        }
+
+        .content {
+            color: black;
+            font-size: 30px;
+            padding: 8px 12px;
+            position:relative;
+            top: 10px;
+            width:100%;
+            text-align: center;
+            margin-left:70;
+        }
+
+        /*creating the Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .foot {
+            background-color: black;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 200 px;
+            color: floralwhite;
+            text-align: center;
+        }
+
+        .end {
+            height: 60;
+            text-align: center;
+            background-color: rgb(206, 199, 197);
+        }
+
+        .end a {
+            float: left;
+            text-align: center;
+            margin-left: 203;
+        }
+        .ab {
+            color: black;
+            margin-left: 200px;
+            font-size:24px;
+            text-decoration: none;
+            background-color: burlywood;
+        }
+        .ab:hover{
+            color: red;
+            background-color:pink;
+        }
+        .data{
+            background-color:lightblue;
+            color:forestgreen;
+            height: 390px;
+            width: 200px;
+            font:small-caption;
+        }
+        .specialists{
+            height:500px;
+            width:200px;
+            float: left;
+        }
+        .heading{
+            background-color:blue;
+            color:black;
+            height: 55px;
+            width: 200px;
+            font: oblique;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hospitals Collaborated With Us</h1>
+    <div class="slidercontainer">
+        <div class="specialists">
+              <div class="heading"><h2> Hospitals - Collab  ---With Us--</h2></div>
+              <div class="data"><marquee direction="down" height="99%"><h2>* Fortis Hospital,Mumbai</h2>
+              <h2>* Apollo Gleneagles Hospital,Kolkata</h2>
+              <h2>* Kokoilaben Hospital,Mumbai</h2>
+              <h2>* Hospital Of Cardiology,lucknow</h2><h2>* All India Institute of Medical Science,New Delhi</h2><h2>* All India Institute of Medical Science,Rishikesh</h2><h2>* City Hospital,Kanpur</h2><h2>* Rama Dental Hospital,Kanpur</h2><h2>* GSVM Medical Hospital,Kanpur</h2><h2>* Apollo Hospiatal,Delhi</h2><h2>* J.K.M Hospital ,Hyderabaad</h2><h2>* Regency Hospital,Delhi</h2><h2>* Cooper Hospital,Mumbai</h2></marquee></div>
+        </div>  
+        <div class="showSlide fade">
+            <a href="https://en.wikipedia.org/wiki/All_India_Institute_of_Medical_Sciences,_New_Delhi"><img src="https://media.glassdoor.com/l/4c/19/2b/69/a-i-i-m-s.jpg"/></a>
+            <div class="content">All India Institute of Medical Science,New Delhi</div> 
+        </div>
+        <div class="showSlide fade">
+            <a href="https://en.wikipedia.org/wiki/All_India_Institute_of_Medical_Sciences,_Rishikesh"><img src="https://getmyuni.azureedge.net/college-images-test/all-india-institute-of-medical-sciences-aiims-new-delhi/9748d102f55b472c9bd1b6010ab753ad.jpeg"/></a>
+            <div class="content">All India Institute of Medical Science,Rishikesh</div>
+        </div>
+
+        <div class="showSlide fade">
+            <a href="https://en.wikipedia.org/wiki/Fortis_Healthcare"><img src="https://mediglobus.com/wp-content/uploads/2017/11/fortis-memorial-research-institute-gurgaon-1467190475-57738ccb5ab5b-e1525875595664.jpg" /></a>
+            <div class="content">Fortis Hospital,Mumbai</div>
+        </div>
+        <div class="showSlide fade">
+            <a href="https://en.wikipedia.org/wiki/Apollo_Hospitals"><img src="https://ahmedabad.apollohospitals.com/wp-content/uploads/2017/10/glry_g4_2013081239-864x607.jpg" /></a>
+            <div class="content">Apollo Gleneagles Hospital,Kolkata</div>
+        </div>
+        <!-- Navigation arrows -->
+        <a class="left" onclick="nextSlide(-1)">🢀🢀</a>
+        <a class="right" onclick="nextSlide(1)">🢂🢂</a>
+    </div>
+
+    <script>
+        var slide_index = 1;
+        displaySlides(slide_index);
+
+        function nextSlide(n) {
+            displaySlides(slide_index += n);
+        }
+        function displaySlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("showSlide");
+            if (n > slides.length) { slide_index = 1 }
+            if (n < 1) { slide_index = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slide_index - 1].style.display = "block";
+        }  
+    </script>
+        <div class="foot">
+        <h3>
+         helpline number: 6394615048
+        </h3>
+        <h3>you can also connect with us through mails</h3>
+        <h3>MAIL:rishabh.19247@knit.ac.in</h3>
+        <h3>MAIL:rishabh.knit2002@gmail.com</h3>
+        <h3>All copyrights are reserved by Indian Medical Webservices</h3>
+        <div class="end"><a href="https://www.facebook.com/risabh.bhatt.1"><img src="https://image.shutterstock.com/image-photo/kiev-ukraine-april-27-2015-260nw-278925056.jpg" alt="facebook" width="80" height="60"></a>
+            <a href="https://www.instagram.com/risabh.bhatt.1/?hl=en"><img src="https://pbs.twimg.com/profile_images/1306051401236099072/nuSA8oqW_400x400.jpg" alt="instagram" width="80" height="60"></a>
+            <a href="https://www.linkedin.com/in/rishabh-b-bb66481b0"><img src="https://image.shutterstock.com/image-photo/kiev-ukraine-february-19-2015-260nw-259035356.jpg" alt="linkedin" width="80" height="60"></a>
+            <a href="https://mobile.twitter.com/Rishabh38869479"><img src="https://lh3.googleusercontent.com/wIf3HtczQDjHzHuu7vezhqNs0zXAG85F7VmP7nhsTxO3OHegrVXlqIh_DWBYi86FTIGk" alt="twitter" width="80" height="60"></a>
+        </div>
+    </div>
+
+</body>
+
+</html>

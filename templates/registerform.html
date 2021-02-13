@@ -1,0 +1,200 @@
+<html>
+
+<head>
+    <link rel="icon"
+        href="https://i.pinimg.com/236x/f4/c8/51/f4c851183b5ed083a6b08340a9c0a527--medical-tattoos-nurse-tattoos.jpg"
+        type="image/jpg">
+    <style>
+        body {
+            background-image: url(https://previews.123rf.com/images/samarttiw/samarttiw1603/samarttiw160300001/55867911-molecular-structure-medical-background-illustrations.jpg);
+            background-attachment: fixed;
+        }
+
+        .main {
+            background-color: white;
+            color: black;
+            text-align: center;
+            font-style: oblique;
+            font-family: cursive;
+            margin-left: 350;
+            height: 910px;
+            width: 50%;
+        }
+
+        .submit-button {
+            background-color: cornsilk;
+            color: crimson;
+            font-size: medium;
+        }
+
+        .foot {
+            background-color: black;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 550 px;
+            color: floralwhite;
+            text-align: center;
+        }
+
+        .end {
+            height: 60;
+            text-align: center;
+            background-color: rgb(206, 199, 197);
+        }
+
+        .end a {
+            float: left;
+            text-align: center;
+            margin-left: 210;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>ATTENTION :</strong>{{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    <div class="main">
+        <h1>Registration for Appointment</h1>
+        <form action="/data/second/registerform/Detail/" method="post">
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="enter name" name="name" required>
+            <br><br><br><br>
+            <label for="age"><b>Age</b></label>
+            <input type="number" min="0" max="150" placeholder="enter age" name="age" required>
+            <br><br><br><br>
+            <label for="date"><b>Date of Appointment</b></label>
+            <input type="date" placeholder="enter date" name="date" id="date" required>
+            <br><br><br><br>
+            <label for="time"><b>Time of Appointment</b></label>
+            <select name="time" size="5" required>
+                <option>06:00 to 06:30</option>
+                <option>06:30 to 07:00</option>
+                <option>07:00 to 07:30</option>
+                <option>07:30 to 08:00</option>
+                <option>08:00 to 08:30</option>
+                <option>08:30 to 09:00</option>
+                <option>09:00 to 09:30</option>
+                <option>09:30 to 10:00</option>
+                <option>10:00 to 11:30</option>
+                <option>11:30 to 12:00</option>
+                <option>12:00 to 12:30</option>
+                <option>12:30 to 13:00</option>
+                <option>13:00 to 13:30</option>
+                <option>13:30 to 14:00</option>
+                <option>14:30 to 15:00</option>
+                <option>15:00 to 15:30</option>
+                <option>15:30 to 16:00</option>
+                <option>16:00 to 16:30</option>
+                <option>16:30 to 17:00</option>
+                <option>17:00 to 17:30</option>
+                <option>17:30 to 18:00</option>
+                <option>18:00 to 18:30</option>
+                <option>18:30 to 19:00</option>
+                <option>19:00 to 19:30</option>
+                <option>19:30 to 20:00</option></select>
+                <br><br><br><br>
+                <label for="email"><b>EMAIL</b></label>
+                <input type="email" placeholder="enter your email" name="email" required>
+                <br><br><br><br>
+                <label for="problem"><b>Problem related with</b></label>
+                <select id="problem" name="problem" size="5" onchange="dynamic_function()" required>
+                    <option>Overweight and Obesity</option>
+                    <option>Hiv/Aids/Infection</option>
+                    <option>Corona Virus/T.B</option>
+                    <option>Mental Health</option>
+                    <option>Injury/Surgery</option>
+                    <option>Heart Problems</option>
+                    <option>Bones Problems</option>
+                    <option>Sense organs Problems</option>
+                    <option>Cancer</option>
+                    <option>others</option>
+                </select>
+                <br><br>
+                <div><select id="output" name="output" onchange="dynamic_function1()" required></select></div>
+                {% csrf_token %}<br><br>
+                <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+    <br><br><br><br><br>
+    <div class="foot">
+        <h6>helpline number: 6394615048</h6>
+        <h6>you can also connect with us through mails</h6>
+        <h6>MAIL:rishabh.19247@knit.ac.in</h6>
+        <h6>MAIL:rishabh.knit2002@gmail.com</h6>
+        <h6>All copyrights are reserved by Indian Medical Webservices</h6>
+        <div class="end"><a href="https://www.facebook.com/risabh.bhatt.1"><img
+                    src="https://image.shutterstock.com/image-photo/kiev-ukraine-april-27-2015-260nw-278925056.jpg"
+                    alt="facebook" width="80" height="60"></a>
+            <a href="https://www.instagram.com/risabh.bhatt.1/?hl=en"><img
+                    src="https://pbs.twimg.com/profile_images/1306051401236099072/nuSA8oqW_400x400.jpg" alt="instagram"
+                    width="80" height="60"></a>
+            <a href="https://www.linkedin.com/in/rishabh-b-bb66481b0"><img
+                    src="https://image.shutterstock.com/image-photo/kiev-ukraine-february-19-2015-260nw-259035356.jpg"
+                    alt="linkedin" width="80" height="60"></a>
+            <a href="https://mobile.twitter.com/Rishabh38869479"><img
+                    src="https://lh3.googleusercontent.com/wIf3HtczQDjHzHuu7vezhqNs0zXAG85F7VmP7nhsTxO3OHegrVXlqIh_DWBYi86FTIGk"
+                    alt="twitter" width="80" height="60"></a>
+        </div>
+    </div>
+    <script>
+
+        today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1;//january is 0 that's wehy +1
+        var yy = today.getFullYear();
+        if (dd < 10) dd = "0" + dd;
+        if (mm < 10) mm = "0" + mm;
+        D = yy + "-" + mm + "-" + dd;
+        document.getElementById('date').min = D;
+        function dynamic_function() {
+            var a = document.getElementById("problem").value;
+            if (a == "Overweight and Obesity") {
+                var arr = ["Dr.Raju_Pokhral(Overweight_specialist)", "Dr.Vaidh_Trivedi", "Dr.Aadarsh_Srivastava", "Dr.Faisal_Khan", "Dr.Divya_Kumari"];
+            }
+            else if (a == "Hiv/Aids/Infection") {
+                var arr = ["Dr.Samay_Srivastava(Reseacher_on_Hiv_vaccine)", "Dr.Mahira_Khan", "Dr.Kaushal_Tondon", "Dr.Rajesh_Trivedi", "Dr.Ayush_Kumar"];
+            }
+            else if (a == "Corona Virus/T.B") {
+                var arr = ["Dr.Vaibhava_Trivedi(Researcher_on_corona_vaccine)", "Dr.Aashay_Pal", "Dr.Saurabh_Kumar", "Dr.Rajiv_Shing", "Dr.Prashant_Shingh"];
+            }
+            else if (a == "Mental Health") {
+                var arr = ["Dr.Aadarsh_Srivastava(Mental_Health_Specialist)", "Dr.Ravi_Bishnoi", "Dr.Rajendra_Kumar", "Dr.Akshat_Jain"];
+            }
+            else if (a == "Injury/Surgery") {
+                var arr = ["Dr.Rakesh_Prakash(Cheif_surgeon)", "Dr.Tisha_Sharma", "Dr.Arvind_Shingh", "Dr.Radha_Shukla"];
+            }
+            else if (a == "Heart Problems") {
+                var arr = ["Dr.Ramnath_Prakash", "Dr.Md.Farhan", "Dr.Mayank_Agarwal", "Dr.Priyanka_Verma"];
+            }
+            else if (a == "Bones Problems") {
+                var arr = ["Dr.Arun_Pratap(Bones_specialist)", "Dr.Sarad_Sharma", "Dr.Aman_Dinkar", "Dr.Gautam_Gulati"];
+            }
+            else if (a == "Sense organs Problems") {
+                var arr = ["Dr.Aman_Bansal", "Dr.Amit_Trivedi", "Dr.Aysha_Kumari", "Dr.Raveena_Parmar"];
+            }
+            else if (a == "Cancer") {
+                var arr = ["Dr.Md.Afsaan(Bladder_Cancer)", "Dr.Tripti_Dibri(Breast_Cancer)", "Dr.Himanshu_Kohli(Oral_Cancer)", "Dr.Sambit_Saini(Kidney_Cancer)", "Dr.Jaideep_Bhusan(Lung_Cancer)", "Dr.Aakash_Dubey(Lymphoma_Cancer)", "Dr.Anil_Bhatia(Melanoma_Cancer)"];
+            }
+            else {
+                var arr = ["Dr.Sandeep_Reddy", "Dr.Vijya_Reddy", "Dr.Prabhas_Malya", "Dr.Sameer_Saini"];
+            }
+            var string = "";
+            for (i = 0; i < arr.length; i++) {
+                string = string + "<option value=" + arr[i] + ">" + arr[i] + "</option>";
+            }
+            document.getElementById("output").innerHTML = string;
+        }
+    </script>
+</body>
+
+</html>

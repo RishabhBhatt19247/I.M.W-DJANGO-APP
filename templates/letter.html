@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <link rel="icon" href="https://i.pinimg.com/236x/f4/c8/51/f4c851183b5ed083a6b08340a9c0a527--medical-tattoos-nurse-tattoos.jpg" type="image/jpg">
+        <style>
+            body{
+                background-image: url(https://previews.123rf.com/images/samarttiw/samarttiw1603/samarttiw160300001/55867911-molecular-structure-medical-background-illustrations.jpg);
+                background-attachment:fixed;
+                background-repeat:repeat;
+               }
+            .letter{
+                background-color:white;
+                font-family: cursive;
+                text-align: center;
+                height:970px;
+                width:810px;
+                margin-left:270px;
+            }  
+            img{
+                margin-left: auto;
+                margin-right: auto;
+                display:block;
+            } 
+            h2{
+                color:black;
+                font-size:30px;
+                text-align: center;
+                font-style: oblique;
+            }
+            p{
+                color:red;
+                font-size:15px;
+            }
+            button{
+                scale:20px;
+            }
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+        {% for message in messages %}
+         <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+           <strong>ATTENTION :</strong>{{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+         </div>
+        {% endfor %}
+   
+    <div class='letter'>
+        <h6>congratulation! you have successfully booked the Appointment</h6><br>
+        <img src="https://i.pinimg.com/236x/f4/c8/51/f4c851183b5ed083a6b08340a9c0a527--medical-tattoos-nurse-tattoos.jpg" class="img" alt="logo of Indian Medical Webservices" width="200" height="200">
+        <h1>Allotment Letter</h1><br><h4>Application no: {{APPNO}}</h4><br><h4>Name: {{NAME}}</h2><br><h4>Your Problem: {{PROBLEM}}</h4><br><h4>Age: {{AGE}}</h4><br><h4>Your Doctor: {{DOCTOR}}</h4><br><h4>Date of Appointment: {{DATE}}</h4><br>
+        <h4>Time of Appointment: {{TIME}}</h4><br><h4>Appointment at Place: {{PLACE}}</h4><br>
+         <h4>Note:</h4><p>Dear {{NAME}},If all the given information are correct,then print this allotment letter,We will send you payment link through
+              {{EMAIL}} ,pay the fee and download fee reciept ,and come the given place at given time with Allotment letter and Fee receipt</p>
+              <button onclick="window.print()"><h3>Print</h3></button>
+    </div>
+       
+    </body>
+</html>
+
+

@@ -6,7 +6,7 @@ from data.models import Detail
 class DetailAdmin(admin.ModelAdmin):
     search_fields=('appno','name','doctor','time','date')
     list_display=['appno','name','doctor','time','date']
-    list_filter=['doctor']
+    list_filter=['doctor','date']
 
 
 

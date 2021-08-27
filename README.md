@@ -3,7 +3,7 @@ a DJANGO PROJECT
 
 -----Why This App?-----
 It is a django project, Designed on the concept of Online medical services. through this Web app patient can book their slot and fix their appointment with World's Best Doctors
-NOTE-Any genuine contribution is appreciated and I will merge it definately .
+..---NOTE-Any genuine contribution is appreciated and I will merge it definately .
 
 -----Database---
 currently this app uses django's builtin database sqlite .
@@ -19,7 +19,7 @@ step4--Run python manage.py makemigrations and python manage.py migrate(for gene
 
 step5- run django-admin createsuperuser  give your name ,email password etc (for accessing admin panel of app).
 
-step6--just run pyrhon manage.py runserver.
+step6--just run python manage.py runserver.
 
 
 

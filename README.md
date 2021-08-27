@@ -23,7 +23,8 @@ step6--just run python manage.py runserver.
 
 
 
----What I actually Have Done----
+
+-------------------------What I actually Have Done---------------------
 1)--install Python
 
 2)--install django

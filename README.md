@@ -9,10 +9,15 @@ currently this app uses django's builtin database sqlite .
 
 ----How Can I run this app On my local Machine----
 step1--If you have allready installed Python,You just need to install Django (Django 3.1.1 recommended.)
+
 step2-- fork this repository, open this project in your editor on your local machine.
+
 step3--delete pycache , migrations , db.sqlite files (because they will generate automatically when you use this app on your local machine).
+
 step4--Run python manage.py makemigrations and python manage.py migrate(for generating database files).
+
 step5- run django-admin createsuperuser  give your name ,email password etc (for accessing admin panel of app).
+
 step6--just run pyrhon manage.py runserver.
 
 

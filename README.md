@@ -3,6 +3,7 @@ a DJANGO PROJECT
 
 -----Why This App?-----
 It is a django project, Designed on the concept of Online medical services. through this Web app patient can book their slot and fix their appointment with World's Best Doctors
+NOTE-Any genuine contribution is appreciated and I will merge it definately .
 
 -----Database---
 currently this app uses django's builtin database sqlite .
@@ -23,27 +24,27 @@ step6--just run pyrhon manage.py runserver.
 
 
 ---What I actually Have Done----
-1) install Python
+1)--install Python
 
-2)install django
+2)--install django
 
-3) Create an project using django-admin startproject .
+3)--Create an project using django-admin startproject .
 
-4)Create an app- data.
+4)--Create an app- data.
 
-5)create a folder template ,in which all front end work is done with help of html , css , javascript and Bootstrape(content delivery network based framework).
+5)--create a folder template ,in which all front end work is done with help of html , css , javascript and Bootstrape(content delivery network based framework).
 
-6) In urls.py of project(our project),I added all templates path .
+6)--In urls.py of project(our project),I added all templates path .
 
-7)in views.py of Project , added handlelogin, handlelogout , signup functions for authentication purpose.
+7)--in views.py of Project , added handlelogin, handlelogout , signup functions for authentication purpose.
 
-8)In urls.py of data, I have added final template ,which is appointment letter provided to patient on succesfull booking of appointment.
+8)--In urls.py of data, I have added final template ,which is appointment letter provided to patient on succesfull booking of appointment.
 
-9) In views.py of data, created a Detail function for fethcing details of patient, and check that date is valid, Doctor is available, ask Time slot is not Given to any other patient etc.
+9)--In views.py of data, created a Detail function for fethcing details of patient, and check that date is valid, Doctor is available, ask Time slot is not Given to any other patient etc.
 
-10) in models.py of data, added some required data fields such as Disease ,doctor date etc.
+10)--in models.py of data, added some required data fields such as Disease ,doctor date etc.
 
-11) In admin.py of data, added field ,filters, display list.
+11)--In admin.py of data, added field ,filters, display list.
 
 
 
